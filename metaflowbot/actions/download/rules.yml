@@ -1,0 +1,29 @@
+- name: Download artifacts created by metaflow
+  event_type: user_message
+  message: download (.+)
+  action:
+    op : download
+    message: '{event.msg}'
+    create-thread: false
+
+- name: Download artifacts created by metaflow in new thread
+  event_type: new_thread
+  message: download (.+)
+  action:
+    op: download
+    message: '{event.msg}'
+    create-thread: true
+
+- name: How to download 
+  event_type: user_message
+  message: how to download
+  action:
+    op: how-to-download
+    create-thread: false
+
+- name: How to download in new thread
+  event_type: new_thread
+  message: how to download
+  action:
+    op: how-to-download
+    create-thread: true

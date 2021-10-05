@@ -1,0 +1,4 @@
+metaflow.s3.*
+__pycache__
+.github
+*.egg-info
