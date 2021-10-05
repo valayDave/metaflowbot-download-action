@@ -4,7 +4,7 @@ This repository is an example of a custom action for the [Metaflow bot](https://
 
 ## Pre Instalation
 
-This action requires a modified `manifest.yml` to create
+This action requires a modified [`manifest.yml`](manifest.yml) to create the slack application. 
 
 ## Installing this action 
 
