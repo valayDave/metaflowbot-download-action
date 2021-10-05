@@ -108,7 +108,7 @@ def resolve_message(message):
 
 def create_howto_message():
     return ''.join([
-        "You can download an artifact stored on S3 using the `donwnload command \n",
+        "You can download an artifact stored on S3 using the `donwnload` command \n",
         "To download artifact from latest run of a flow : `download latest <artifactname> from HelloFlow`\n",
         "To download artifact from a specific run : `download <artifactname> from HelloFlow/12`\n\n",
         "_<artifactname> can be any properties set in the `end` step_"
