@@ -57,13 +57,6 @@ def resolve_artifact(run_obj:Run,info_obj):
     raise InvalidPath
 
 
-def heartbeat(func):
-    
-    def wrapper(context,*args,**kwargs):
-        context
-
-
-        
     
 def _upload_to_slack(clickcontext,tempfile,artname,s3path,):
     filename = s3path.split('/')[-1]
@@ -152,6 +145,7 @@ def download(ctx, message=None,create_thread=False):
         if run_obj is None:
             obj.reply(HEADINGS.NO_RUNS)
             return 
+        obj.reply(f"Resolving Artifacts for Run {run_obj.pathspec}")
         try:
             s3_path = resolve_artifact(run_obj,message_info)
             obj.reply("Ok, found the S3 URL of the artifact. Downloading now. ")
